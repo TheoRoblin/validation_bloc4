@@ -1,0 +1,79 @@
+[
+    {
+        "path": "/",
+        "controller": "App\\Controller\\Web\\HomeController",
+        "action": "index"
+    },
+    {
+        "path": "/login",
+        "controller": "App\\Controller\\SecurityController",
+        "action": "login"
+    },
+    {
+        "path": "/logout",
+        "controller": "App\\Controller\\SecurityController",
+        "action": "logout"
+    },
+    {
+        "path": "/register",
+        "controller": "App\\Controller\\RegisterController",
+        "action": "index"
+    },
+    {
+        "path": "/admin/dashboard",
+        "controller": "App\\Controller\\Admin\\DashboardController",
+        "action": "index",
+        "guard": "App\\Guard\\AdminGuard"
+    },
+    {
+        "path": "/admin/ticket",
+        "controller": "App\\Controller\\Admin\\TicketController",
+        "action": "index",
+        "guard": "App\\Guard\\AdminGuard"
+    },
+    {
+        "path": "/admin/ticket/show",
+        "controller": "App\\Controller\\Admin\\TicketController",
+        "action": "show",
+        "guard": "App\\Guard\\AdminGuard"
+    },
+    {
+        "path": "/admin/ticket/close",
+        "controller": "App\\Controller\\Admin\\TicketController",
+        "action": "close",
+        "guard": "App\\Guard\\AdminGuard"
+    },
+    {
+        "path": "/admin/user",
+        "controller": "App\\Controller\\Admin\\UserController",
+        "action": "index"
+    },
+    {
+        "path": "/admin/user/new",
+        "controller": "App\\Controller\\Admin\\UserController",
+        "action": "new"
+    },
+    {
+        "path": "/user/ticket",
+        "controller": "App\\Controller\\User\\TicketController",
+        "action": "index",
+        "guard": "App\\Guard\\UserGuard"
+    },
+    {
+        "path": "/user/dashboard",
+        "controller": "App\\Controller\\User\\TicketController",
+        "action": "index",
+        "guard": "App\\Guard\\UserGuard"
+    },
+    {
+        "path": "/user/ticket/new",
+        "controller": "App\\Controller\\User\\TicketController",
+        "action": "new",
+        "guard": "App\\Guard\\UserGuard"
+    },
+    {
+        "path": "/api/tickets",
+        "controller": "App\\Controller\\Api\\TicketController",
+        "action": "index"
+    }
+]
